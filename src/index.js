@@ -1,15 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom/client"
 
-const cvladiOne = 40;
-const cvladiTwo = 50;
+
+
 
 
 function App() {
+    const [cvladiOne, increaseTwo] = useState(0);
     return (
-        <p>{cvladiOne + cvladiTwo}</p>
-    ) 
 
+        <React.Fragment>
+        
+        <button onClick={() => increaseTwo(cvladiOne + 2)}>click 2x</button>
+
+
+<p>increase 2x: {cvladiOne}</p>
+
+        </React.Fragment> 
+    ) 
 
 }
 
