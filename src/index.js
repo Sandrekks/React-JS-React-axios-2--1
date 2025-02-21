@@ -1,25 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-import Navigation from "./header";
-import Footer from "./footer";
+
+const cvladiOne = 40;
+const cvladiTwo = 50;
+
 
 function App() {
     return (
-        <React.Fragment>
-        <Navigation></Navigation>
+        <p>{cvladiOne + cvladiTwo}</p>
+    ) 
 
-        <button onClick={showAlert}>Click</button>
-        
-       <Footer></Footer>
-               
-       </React.Fragment>
-    )
-        
+
 }
 
- function showAlert() {
-    alert("გამარჯობა მსოფლიო!")
- }
 
 
 var root = document.getElementById("root")
