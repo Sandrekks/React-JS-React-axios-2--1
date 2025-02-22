@@ -1,25 +1,26 @@
 import React, {useState} from "react";
-import ReactDOM from "react-dom/client"
-
-
+import ReactDOM from "react-dom/client";
+import surati from "./images/download.jpg";
+import suratiori from "./images/gratisography-augmented-reality-800x525.jpg";
+import suratisami from "./images/images.png";
+import suratiotxi from "./images/istockphoto-517188688-612x612.jpg";
 
 
 
 function App() {
-    const [cvladiOne, increaseTwo] = useState(0);
+    
     return (
-
         <React.Fragment>
-        
-        <button onClick={() => increaseTwo(cvladiOne + 2)}>click 2x</button>
+            <div>
+       <img src={surati} ></img>
+       <img src={suratiori} width={"300px"} ></img>
+       <img src={suratisami}></img>
+       <img src={suratiotxi} width={"300px"}></img>
+       </div>
+       </React.Fragment>
+    )
 
-
-<p>increase 2x: {cvladiOne}</p>
-
-        </React.Fragment> 
-    ) 
-
-}
+  }
 
 
 
