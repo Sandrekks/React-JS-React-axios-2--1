@@ -1,23 +1,22 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom/client";
-import surati from "./images/download.jpg";
-import suratiori from "./images/gratisography-augmented-reality-800x525.jpg";
-import suratisami from "./images/images.png";
-import suratiotxi from "./images/istockphoto-517188688-612x612.jpg";
+
 
 
 
 function App() {
-    
+  const [time, dateTime] = useState(new Date());
+
+    useEffect (function() {
+       const date = new Date();
+       dateTime(date)
+    },[]);
+
     return (
-        <React.Fragment>
-            <div>
-       <img src={surati} ></img>
-       <img src={suratiori} width={"300px"} ></img>
-       <img src={suratisami}></img>
-       <img src={suratiotxi} width={"300px"}></img>
-       </div>
-       </React.Fragment>
+      <>
+      <p>{time.getDate()} / {time.getMonth()+ 1} / {time.getFullYear()}</p>
+      <p>{time.getHours()} / {time.getMinutes() } / {time.getSeconds()}</p>
+      </>
     )
 
   }
