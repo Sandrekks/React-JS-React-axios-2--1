@@ -1,22 +1,31 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css"
+
 
 
 function App() {
-  const numbers = [-1]
-    const number = numbers[0]
 
-  if(number >= 0) {
-    return(
-      <div className="GreenSquare"></div>
-    )
-  }else if(number < 0)
-    return(
-      <div className="RedSquare"></div>
-    )
+  const num1 = 10;
+  const num2 = 34;
+  let shedegi;
+                    //ამ დავალებაში მოცემულია ორი რიცხვის შედარება ექსფრეშენში და გამოყენებულია if/else
+                      //კონსტრუქცია.
 
+  if (num1 > num2) {
+    shedegi = num1;
+  } else if(num1 < num2) {
+    shedegi = num2;
   }
+
+return (
+  
+  <React.Fragment>
+    <p >{shedegi}</p>
+    
+  </React.Fragment>
+)
+  
+}
 var root = document.getElementById("root")
 ReactDOM.createRoot(root).render(<App></App>)
 
