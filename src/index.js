@@ -5,17 +5,16 @@ import ReactDOM from "react-dom/client";
 
 
 function App() {
-  const [time, dateTime] = useState(new Date());
-
-    useEffect (function() {
-       const date = new Date();
-       dateTime(date)
-    },[]);
+   
+  useEffect(function() {
+    const timer = setTimeout(() => {
+      document.body.style.backgroundColor = "purple"
+    },2000)
+  })
 
     return (
       <>
-      <p>{time.getDate()} / {time.getMonth()+ 1} / {time.getFullYear()}</p>
-      <p>{time.getHours()} / {time.getMinutes() } / {time.getSeconds()}</p>
+      
       </>
     )
 
