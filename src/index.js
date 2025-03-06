@@ -1,39 +1,28 @@
 import React, {useRef, useEffect, useState} from "react";
 import ReactDOM from "react-dom/client";
-import image from "./images/download.jpg";
-import css from "./index.css";
-
-
-
-
+import Home  from "./components/Home";
+import contact from "./components/contact";
+import About from "./components/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
  
-   const [color, setColor] = useState(false)  
-
-
-   var result;
-   if(color) {
-    result =  <img src={image} className="foto"></img>  // true-ს შემთხვევაში გამოდის ფოტო
-                                                                
-   }else {
-    result = null
-   }
-
-   var shecvla
-   if(color) {
-    shecvla = "True"    //ლოგიკა სადაც ყოველ კლიკზე იცვლება ტექსტი
-   }else {
-    shecvla = "false"
-   }
-
+   
 
   
   return (
- <>
- <button className="adgili" onClick={() => setColor(!color)}>{shecvla}</button>
- {result}
- </>
+  <React.Fragment>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/componentHome" element={Home}></Route>
+      <Route path="/componentContact" element={contact}></Route>
+      <Route path="/componentAbout" element={About}></Route>
+
+      
+    </Routes>
+    </BrowserRouter>
+  </React.Fragment>
+ 
   )
 
 }
