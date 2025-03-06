@@ -18,7 +18,7 @@ function App() {
     });
 
 
-    function onClickk() {https://github.com/swif14/useRef-react.git
+    function onClickk() {
       window.alert("Hello World")
     }
     
