@@ -1,35 +1,39 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useState} from "react";
 import ReactDOM from "react-dom/client";
-import image from ".//images/download.jpg";
+import image from "./images/download.jpg";
 import css from "./index.css";
 
 
 
 
+
 function App() {
-  const number = useRef();
-
-  const focusi = useRef();
-
  
-    useEffect(() => {
-    number.current.focus()
-    focusi.current.focus();
-    });
+   const [color, setColor] = useState(false)  
 
 
-    function onClickk() {
-      window.alert("Hello World")
-    }
-    
+   var result;
+   if(color) {
+    result =  <img src={image} className="foto"></img>  // true-ს შემთხვევაში გამოდის ფოტო
+                                                                
+   }else {
+    result = null
+   }
+
+   var shecvla
+   if(color) {
+    shecvla = "True"    //ლოგიკა სადაც ყოველ კლიკზე იცვლება ტექსტი
+   }else {
+    shecvla = "false"
+   }
+
+
   
   return (
-     <>
-     <input type="text" ref={number}/>
-
-     <button onClick={onClickk} ref={focusi} >click</button>
-     
-     </>
+ <>
+ <button className="adgili" onClick={() => setColor(!color)}>{shecvla}</button>
+ {result}
+ </>
   )
 
 }
