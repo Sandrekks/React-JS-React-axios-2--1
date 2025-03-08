@@ -1,27 +1,25 @@
-import React, {useRef, useEffect, useState} from "react";
+import React, { useEffect} from "react";
 import ReactDOM from "react-dom/client";
-import Home  from "./components/Home";
-import contact from "./components/contact";
-import About from "./components/About";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
 
 function App() {
  
+  useEffect(function() {
+    axios.get("https://jsonplaceholder.typicode.com/todos").then(function(response) {
+    console.log(response.data)
+    }).catch(function(error)
+     {
+      console.log(error)
+    })
+  });
    
 
   
   return (
-  <React.Fragment>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/componentHome" element={Home}></Route>
-      <Route path="/componentContact" element={contact}></Route>
-      <Route path="/componentAbout" element={About}></Route>
+ <React.Fragment>
 
-      
-    </Routes>
-    </BrowserRouter>
-  </React.Fragment>
+  
+ </React.Fragment>
  
   )
 
